@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lorelei Lao">
+    <meta name="keywords" content="CSS, HTML, Javascript">
+    <meta name="description" content="assignment 2 for creative coding: intro to programming concepts">
+    <title>ULTIMATE HEADACHE</title>
+    <link href="css/style.css" rel="stylesheet"> <!-- links css -->
+
+</head>
+<body>
+    
+    <!-- load all audio files-->
+    <audio id="liamAudio" preload="none">
+        <source src="audio/higher.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="loreleiAudio" preload="none">
+        <source src="audio/get cubed idiot.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="joshAudio" preload="none">
+        <source src="audio/fortnite battle pass.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="ethanAudio" preload="none">
+        <source src="audio/sad spongebob.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="marlonAudio" preload="none">
+        <source src="audio/goku drip.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="xavierAudio" preload="none">
+        <source src="audio/gigachad.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="cassieAudio" preload="none">
+       <source src="audio/yippee.mp3" type="audio/mp3">
+    </audio>
+    
+    <audio id="paoloAudio" preload="none">
+        <source src="audio/sheesh.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- acts as container for all items-->
+    <main> 
+
+        <header>
+
+            <h1>THE ULTIMATE HEADACHE-INATOR</h1>
+            <H2>click the icons to play, double click to pause</H2>
+
+        </header>
+
+        <!-- container for soundboard-->
+        <div class="soundboard"> 
+
+            <!-- liam -->
+            <img src="images/liam.png" id="Liam">
+
+            <!-- me -->
+            <img src="images/me.png" id="Lorelei">
+
+            <!-- joshua -->
+            <img src="images/josh.png" id="Josh">
+
+            <!-- ethan -->
+            <img src="images/ethan.png" id="Ethan">
+
+            <!-- marlon -->
+            <img src="images/marlon.png" id="Marlon">
+
+            <!-- xavier -->
+            <img src="images/xavier.png" id="Xavier">
+
+            <!-- cassandra -->
+            <img src="images/cassie.png" id="Cassie">
+
+            <!-- paolo -->
+            <img src="images/paolo.png" id="Paolo">
+
+        </div>
+
+    </main>
+    
+    <footer>
+        <h2>what the hell is this?</h2>
+        <p>
+            this was created to test javascript using event listeners, audio files and variables. the idea was to make
+            a soundboard / soundmixer to try and blend different audio files together, except its really really bad.
+            <br><br>
+            the audio will overlap each other if you press more than one button. it also loops so it just gets even
+            worse the more buttons you press.
+        </p>
+    </footer>
+
+    <script>
+    //connects html elements to javascript variables
+    let liamAudio = document.getElementById("liamAudio");
+    let Liam = document.getElementById("Liam");
+
+    //this event will run if the user clicks an icon
+    Liam.addEventListener("click", playLiam);
+    function playLiam() {
+        liamAudio.loop = true; //loops audio
+        liamAudio.play(); //plays assigned audio file
+    }
+    //this event will run if the user double clicks an icon
+    Liam.addEventListener("dblclick", pauseLiam);
+    function pauseLiam() {
+        liamAudio.loop = false; //disables loop
+        liamAudio.pause(); //pauses assigned audio file
+    }
+
+    //--------------------------------------------------------
+
+    let loreleiAudio = document.getElementById("loreleiAudio");
+    let Lorelei = document.getElementById("Lorelei");
+
+    Lorelei.addEventListener("click", playLorelei);
+    function playLorelei() {
+        loreleiAudio.loop = true;
+        loreleiAudio.play();
+    }
+    Lorelei.addEventListener("dblclick", pauseLorelei);
+    function pauseLorelei() {
+        loreleiAudio.loop = false;
+        loreleiAudio.pause();
+    }
+
+    //--------------------------------------------------------
+
+    let joshAudio = document.getElementById("joshAudio");
+    let Josh = document.getElementById("Josh");
+
+
+    Josh.addEventListener("click", playJosh);
+    function playJosh() {
+        joshAudio.loop = true;
+        joshAudio.play();   
+    }
+    Josh.addEventListener("dblclick", pauseJosh);
+    function pauseJosh() {
+        joshAudio.loop = false;
+        joshAudio.pause();
+    }
+
+    //--------------------------------------------------------
+
+    let ethanAudio = document.getElementById("ethanAudio");
+    let Ethan = document.getElementById("Ethan");
+
+    Ethan.addEventListener("click", playEthan);
+    function playEthan() {
+        ethanAudio.loop = true;
+        ethanAudio.play();
+    }
+    Ethan.addEventListener("dblclick", pauseEthan);
+    function pauseEthan() {
+        ethanAudio.loop = false;
+        ethanAudio.pause();
+    }
+
+    //--------------------------------------------------------
+
+    let marlonAudio = document.getElementById("marlonAudio");
+    let Marlon = document.getElementById("Marlon");
+
+    Marlon.addEventListener("click", playMarlon);
+    function playMarlon() {
+        marlonAudio.loop = true;
+        marlonAudio.play();
+    }
+    Marlon.addEventListener("dblclick", pauseMarlon);
+    function pauseMarlon() {
+        marlonAudio.loop = false;
+        marlonAudio.pause();
+    }
+
+    //--------------------------------------------------------
+
+    let xavierAudio = document.getElementById("xavierAudio");
+    let Xavier = document.getElementById("Xavier");
+
+    Xavier.addEventListener("click", playXavier);
+    function playXavier() {
+        xavierAudio.loop = true;
+        xavierAudio.play();
+    }
+    Xavier.addEventListener("dblclick", pauseXavier);
+    function pauseXavier() {
+        xavierAudio.loop = false;
+        xavierAudio.pause();
+    }
+
+    //--------------------------------------------------------
+
+    let cassieAudio = document.getElementById("cassieAudio");
+    let Cassie = document.getElementById("Cassie");
+
+    Cassie.addEventListener("click", playCassie);
+    function playCassie() {
+        cassieAudio.loop = true;
+        cassieAudio.play();
+    }
+    Cassie.addEventListener("dblclick", pauseCassie);
+    function pauseCassie() {
+        cassieAudio.loop = false;
+        cassieAudio.pause();
+    }
+
+    //--------------------------------------------------------
+
+    let paoloAudio = document.getElementById("paoloAudio");
+    let Paolo = document.getElementById("Paolo");
+
+    Paolo.addEventListener("click", playPaolo);
+    function playPaolo() {
+        paoloAudio.loop = true;
+        paoloAudio.play();
+    }
+    Paolo.addEventListener("dblclick", pausePaolo);
+    function pausePaolo() {
+        paoloAudio.loop = false;
+        paoloAudio.pause();
+    }
+
+    //does not work: originally wanted to use an if statment to detect which buttons were pressed
+    
+    // if (liam.onclick === true) {
+    //     let audio = document.getElementById("liamAudio");
+    //     audio.play();
+    // } else if (lorelei.onclick === true) {
+    //     audio = document.getElementById("loreleiAudio");
+    //     audio.play();
+    // }
+        
+    </script>
+
+</body>
+</html>

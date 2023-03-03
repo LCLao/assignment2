@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap');
+ /* silkscreen font */
+
+h1 {
+    font-family: 'silkscreen';
+    font-size: 0.5in; font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    color: #525254;
+}
+
+h2 {
+    font-family: 'silkscreen';
+    font-size: 0.3in; 
+    text-align: center;
+    color: #525254;
+}
+p {
+    font-family: 'silkscreen';
+    font-size: 18pt; 
+    text-align: justify;
+    color: #525254;
+    padding-left: 1.5in; padding-right: 1.5in;
+}
+
+body { /* wrapper */
+    width: 75vw;
+    margin: auto;
+    margin-top: 1in;
+}
+
+header {
+    margin-bottom: 0.5in;
+}
+
+main {
+    background-color: rgb(226, 225, 230);
+    padding: 1in;
+    border-radius: 10px;
+}
+
+footer {
+    margin-bottom: 1in;
+}
+
+.soundboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "liam lorelei josh cassie "
+    "marlon ethan xavier paolo";
+
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px;
+}
+    .soundboard img {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+        background: white;
+        transform: scale(1);
+    }
+    
+    /* icon will shrink when pressed,
+    animation plays out longer when long-pressed */
+    .soundboard img:active {
+        transform: scale(0.95);
+        transition: transform .1s;
+        transition-timing-function: ease-in-out;
+    }
+
+/* id tags used for each individual icon */
+#Liam {
+    grid-area: liam;
+}
+#Lorelei {
+    grid-area: lorelei;
+}
+#Josh {
+    grid-area: josh;
+}
+#Marlon {
+    grid-area: marlon;
+}
+#Ethan {
+    grid-area: ethan;
+}
+#Xavier {
+    grid-area: xavier;
+}
+#Cassie {
+    grid-area: cassie;
+}
+#Paolo {
+    grid-area: paolo;
+}
